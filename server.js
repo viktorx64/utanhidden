@@ -6,14 +6,11 @@ var app = express();
 app.get('/', function(req, res){
    res.sendFile(__dirname + "/pages/index.html");
 });
-app.get('/hello', function(req, res){
+app.get('/home', function(req, res){
     res.sendFile(__dirname + "/pages/hello.html");
  });
- app.get('/dynamic_view', function(req, res){
-    res.render('dynamic', {
-       name: "TutorialsPoint", 
-       url:"http://www.tutorialspoint.com"
-    });
+ app.get('/about', function(req, res){
+    res.sendFile(__dirname + "/pages/about.html");
  });
 
 app.listen(process.env.PORT || 3000);
